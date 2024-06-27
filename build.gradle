@@ -23,6 +23,8 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     implementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.17.1'
+
 
 }
 
@@ -56,6 +58,19 @@ test {
     test.outputs.upToDateWhen {false}
 
 }
+
+
+// test {
+//     useTestNG() {
+//         suites 'src/test/resources/testng.xml'
+//     }
+
+//     // Configure test logging
+//     testLogging {
+//         showStandardStreams = true
+//         events "passed", "skipped", "failed"
+//     }
+// }
 
 mainClassName = 'demo.App'
 
